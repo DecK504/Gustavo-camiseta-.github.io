@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <img src="barcelona.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta FC Deuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #20b458;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Camiseta FC Negreira</h1>
+    <p>Comprar Trapeador.</p>
+    <button onclick="enviarWhatsApp()">Comprar</button>
+</div>
+
+<script>
+    function enviarWhatsApp() {
+        // Número de WhatsApp al que quieres enviar el mensaje (cambia esto por el número que prefieras)
+        const telefono = '+50431459422';
+        const mensaje = 'Hola, me interesa Comprar este trapeador.';
+        
+        // Redirigir a WhatsApp Web o a la app móvil
+        const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>
